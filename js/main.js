@@ -249,8 +249,7 @@
   }());
 
   /* --------------------------------------------------------
-     7. Form — presentational submit handler
-        Shows "Sent." in button, resets after 3s
+     7. Form — submit to Formspree via fetch
   -------------------------------------------------------- */
   const quoteForm = document.getElementById('quote-form');
   const submitBtn = document.getElementById('form-submit');
@@ -259,18 +258,40 @@
     quoteForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const originalText = submitBtn.textContent;
-
-      submitBtn.textContent = 'Sent.';
+      var originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending…';
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.6';
 
-      setTimeout(function () {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '';
-        quoteForm.reset();
-      }, 3000);
+      fetch(quoteForm.action, {
+        method: 'POST',
+        body: new FormData(quoteForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          submitBtn.textContent = 'Sent — thank you.';
+          quoteForm.reset();
+          setTimeout(function () {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '';
+          }, 4000);
+        } else {
+          submitBtn.textContent = 'Something went wrong.';
+          setTimeout(function () {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '';
+          }, 3000);
+        }
+      }).catch(function () {
+        submitBtn.textContent = 'Connection error.';
+        setTimeout(function () {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '';
+        }, 3000);
+      });
     });
   }
 
