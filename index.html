@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EHW Landscaping</title>
+  <meta name="description" content="EHW Landscaping — two brothers, one standard. Lawn care, garden design, hardscaping, and seasonal maintenance across Cheltenham, Bristol, and Gloucester." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 68'%3E%3Cpath d='M26 64 C26 64,3 52,2 32 C1 12,14 2,26 2 C38 2,51 12,50 32 C49 52,26 64,26 64 Z' fill='rgba(255,255,255,0.15)' stroke='%23ffffff' stroke-width='2'/%3E%3Cline x1='26' y1='62' x2='26' y2='5' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M26 25 C20 22,10 20,5 19' stroke='%23ffffff' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3Cpath d='M26 38 C18 34,8 33,4 32' stroke='%23ffffff' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3Cpath d='M26 25 C32 22,42 20,47 19' stroke='%23ffffff' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3Cpath d='M26 38 C34 34,44 33,48 32' stroke='%23ffffff' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Global grain overlay -->
+  <div class="overlay-grain" aria-hidden="true"></div>
+  <!-- Global vignette overlay -->
+  <div class="overlay-vignette" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">EHW</a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <img src="assets/images/logo/ehw_logo_transparent.png" alt="EHW Landscaping" class="hero-logo" draggable="false">
+      <p class="hero-sub">Landscapes</p>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>&#8595;</span>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <div class="container">
+      <span class="label reveal">Our Work</span>
+
+      <!-- Lawn Care -->
+      <div class="gallery-group">
+        <span class="gallery-heading reveal">Lawn Care</span>
+        <div class="gallery-grid" data-stagger>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/lawns/lawn-01.jpg" alt="Striped lawn at residential property" loading="lazy" />
+          </div>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/lawns/lawn-02.jpg" alt="Striped lawn with garden outbuilding" loading="lazy" />
+          </div>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/lawns/lawn-03.jpg" alt="Freshly mowed bungalow lawn" loading="lazy" />
+          </div>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/lawns/lawn-04.jpg" alt="Large countryside lawn with stripes" loading="lazy" />
+          </div>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/lawns/lawn-05.jpg" alt="Residential lawn on a sunny day" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Before & After -->
+      <div class="gallery-group">
+        <span class="gallery-heading reveal">Before &amp; After</span>
+        <div class="ba-pair" data-stagger>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">Before</span>
+            <img src="assets/images/work/transformations/paving-before.jpg" alt="Courtyard before — debris and overgrowth" loading="lazy" />
+          </div>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">After</span>
+            <img src="assets/images/work/transformations/paving-after.jpg" alt="Courtyard after — clean stone paving" loading="lazy" />
+          </div>
+        </div>
+        <div class="ba-pair" data-stagger>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">Before</span>
+            <img src="assets/images/work/transformations/hedge-before.jpg" alt="Overgrown hedge before trimming" loading="lazy" />
+          </div>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">After</span>
+            <img src="assets/images/work/transformations/hedge-after.jpg" alt="Neatly trimmed hedge and clean pathway" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-container">
+      <span class="label reveal">About</span>
+      <blockquote class="about-statement reveal" data-anim="focus">Two brothers, one standard.</blockquote>
+      <p class="about-body reveal">We've been working local land since we were teenagers. EHW means the same thing today as it did then: show up, do the work, leave it better than you found it.</p>
+      <div class="about-stats reveal" data-anim="focus">
+        <div class="stat">
+          <span class="stat-n">12</span>
+          <span class="stat-l">Years</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">200+</span>
+          <span class="stat-l">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">2</span>
+          <span class="stat-l">Brothers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE BAND -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Est. 2012</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Lawn Care</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Garden Design</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Hardscaping</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Seasonal Maintenance</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Cheltenham</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Bristol</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Gloucester</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Free Consultations</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Family Run</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">200+ Projects</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">4 Years</span><span class="marquee-sep">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Est. 2012</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Lawn Care</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Garden Design</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Hardscaping</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Seasonal Maintenance</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Cheltenham</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Bristol</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Gloucester</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Free Consultations</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Family Run</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">200+ Projects</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">4 Years</span><span class="marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="quotes-stack" data-stagger>
+        <div class="quote-item" data-stagger-item data-anim="tilt">
+          <p>&#8220;Showed up when they said. The garden looks incredible.&#8221;</p>
+          <cite>S.H., Hayling Island</cite>
+        </div>
+        <div class="quote-rule" aria-hidden="true"></div>
+        <div class="quote-item" data-stagger-item data-anim="tilt">
+          <p>&#8220;Proper craftsmen. Would recommend without hesitation.&#8221;</p>
+          <cite>M.R., Hayling Island</cite>
+        </div>
+        <div class="quote-rule" aria-hidden="true"></div>
+        <div class="quote-item" data-stagger-item data-anim="tilt">
+          <p>&#8220;They understood exactly what we wanted &#8212; and delivered.&#8221;</p>
+          <cite>J.P., Waterlooville</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-header reveal" data-anim="wipe-up">
+        <span class="label label-light">Contact</span>
+        <h2 class="contact-title">Talk to us.</h2>
+      </div>
+      <form class="quote-form reveal" id="quote-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your number" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option value="lawn-care">Lawn Care</option>
+              <option value="garden-design">Garden Design</option>
+              <option value="hardscaping">Hardscaping</option>
+              <option value="seasonal-maintenance">Seasonal Maintenance</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-group-full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project&#8230;"></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="form-submit">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">EHW</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <span class="footer-copy">&#169; 2025 EHW Landscaping</span>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="modal-close" id="modal-close" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span>Close</span>
+    </button>
+    <div class="modal-body">
+      <div class="modal-stage">
+        <button class="modal-arrow" id="modal-prev" aria-label="Previous image">&#8592;</button>
+        <div class="modal-slides" id="modal-slides"></div>
+        <button class="modal-arrow" id="modal-next" aria-label="Next image">&#8594;</button>
+      </div>
+      <div class="modal-foot">
+        <div class="modal-info">
+          <span class="modal-title" id="modal-title"></span>
+          <span class="modal-loc" id="modal-loc"></span>
+        </div>
+        <div class="modal-dots" id="modal-dots"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
