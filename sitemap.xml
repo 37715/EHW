@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ehwlandscapes.com/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/gardens/garden-01.jpg</image:loc>
+      <image:caption>Flowering garden with azaleas and bird bath, maintained by EHW Landscapes on Hayling Island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/gardens/garden-02.jpg</image:loc>
+      <image:caption>Formal garden with clipped hedges and stone path, maintained on Hayling Island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/fencing/fence-01.jpg</image:loc>
+      <image:caption>New feather-edge fence installed by EHW Landscapes in Hampshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-01.jpg</image:loc>
+      <image:caption>Freshly mowed lawn by EHW Landscapes on Hayling Island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-02.jpg</image:loc>
+      <image:caption>Tidy striped lawn maintained in South Hampshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-03.jpg</image:loc>
+      <image:caption>Residential lawn cut and edged on Hayling Island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-01.jpg</image:loc>
+      <image:caption>Striped lawn at a Hayling Island property after EHW mowing round</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-04.jpg</image:loc>
+      <image:caption>Large striped countryside lawn maintained in Hampshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-before.jpg</image:loc>
+      <image:caption>Collapsing storm-damaged fence before replacement on Hayling Island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-after.jpg</image:loc>
+      <image:caption>Brand new feather-edge fence installed by EHW Landscapes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/paving-before.jpg</image:loc>
+      <image:caption>Hayling Island courtyard before clearance</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/paving-after.jpg</image:loc>
+      <image:caption>Same courtyard after EHW Landscapes laid clean stone paving</image:caption>
+    </image:image>
+  </url>
+</urlset>

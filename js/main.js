@@ -1,5 +1,5 @@
 /* ============================================================
-   EHW Landscaping — main.js
+   EHW Landscapes — main.js
    ============================================================ */
 
 (function () {
@@ -123,8 +123,7 @@
   }
 
   /* --------------------------------------------------------
-     5. Anchor links — handled by initSectionSnap IIFE below
-        which exposes window._EHW.goToSection
+     5. Anchor links — native browser behaviour (CSS smooth scroll)
   -------------------------------------------------------- */
 
   /* --------------------------------------------------------
@@ -422,180 +421,6 @@
     var dx = e.changedTouches[0].clientX - touchStartX;
     if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
   }, { passive: true });
-
-}());
-
-/* ============================================================
-   SECTION SNAP — slideshow-style scroll, one section at a time
-   easeInOutQuart velocity curve, debounced wheel events
-   ============================================================ */
-(function initSectionSnap() {
-  'use strict';
-
-  var sections = Array.from(document.querySelectorAll(
-    '.hero, #work, #about, .testimonials-section, .contact-section, .site-footer'
-  ));
-  if (!sections.length) return;
-
-  var isAnimating = false;
-  var DURATION = 350;
-
-  /* easeOutExpo — snaps to position almost instantly, then settles smoothly */
-  function ease(t) {
-    return t >= 1 ? 1 : 1 - Math.pow(2, -10 * t);
-  }
-
-  function animateTo(targetY) {
-    var startY = window.scrollY;
-    var dist   = targetY - startY;
-    if (Math.abs(dist) < 2) { isAnimating = false; return; }
-
-    isAnimating = true;
-    var startTs = null;
-
-    function tick(ts) {
-      if (!startTs) startTs = ts;
-      var p = Math.min((ts - startTs) / DURATION, 1);
-      window.scrollTo(0, startY + dist * ease(p));
-      if (p < 1) {
-        requestAnimationFrame(tick);
-      } else {
-        isAnimating = false;
-      }
-    }
-    requestAnimationFrame(tick);
-  }
-
-  function getSectionTops() {
-    return sections.map(function (s) {
-      return Math.round(s.getBoundingClientRect().top + window.scrollY);
-    });
-  }
-
-  function getCurrentIdx() {
-    var tops   = getSectionTops();
-    var scrollY = window.scrollY + window.innerHeight * 0.25;
-    var idx = 0;
-    for (var i = 0; i < tops.length; i++) {
-      if (tops[i] <= scrollY) idx = i;
-    }
-    return idx;
-  }
-
-  function goTo(idx) {
-    idx = Math.max(0, Math.min(sections.length - 1, idx));
-    animateTo(getSectionTops()[idx]);
-  }
-
-  /* Expose for anchor links */
-  window._EHW = window._EHW || {};
-  window._EHW.goToSection = goTo;
-
-  /* ── Wheel ── */
-  var wheelCooldown = false;
-  var wheelTimer;
-
-  /* Check if current section is taller than viewport */
-  function isTallSection(idx) {
-    var sec = sections[idx];
-    return sec.offsetHeight > window.innerHeight * 1.15;
-  }
-
-  /* Check if user can still scroll within a tall section */
-  function canScrollWithin(idx, direction) {
-    var sec = sections[idx];
-    var secTop = Math.round(sec.getBoundingClientRect().top + window.scrollY);
-    var secBottom = secTop + sec.offsetHeight;
-    var viewTop = window.scrollY;
-    var viewBottom = viewTop + window.innerHeight;
-
-    if (direction > 0) {
-      /* Scrolling down — allow if section bottom not yet visible */
-      return secBottom - viewBottom > 40;
-    } else {
-      /* Scrolling up — allow if section top not yet visible */
-      return viewTop - secTop > 40;
-    }
-  }
-
-  window.addEventListener('wheel', function (e) {
-    /* Skip when modal is open */
-    var modal = document.getElementById('project-modal');
-    if (modal && modal.classList.contains('open')) return;
-
-    /* Skip when focus is inside a scrollable form element */
-    var active = document.activeElement;
-    if (active && (active.tagName === 'TEXTAREA' || active.tagName === 'SELECT')) return;
-
-    var direction = e.deltaY > 0 ? 1 : -1;
-    var idx = getCurrentIdx();
-
-    /* For tall sections, allow normal scrolling until edge is reached */
-    if (isTallSection(idx) && canScrollWithin(idx, direction)) {
-      return; /* Let the browser handle the scroll naturally */
-    }
-
-    e.preventDefault();
-    if (isAnimating) return;
-    if (wheelCooldown) return;
-
-    wheelCooldown = true;
-    clearTimeout(wheelTimer);
-    wheelTimer = setTimeout(function () { wheelCooldown = false; }, 100);
-
-    goTo(idx + direction);
-  }, { passive: false });
-
-  /* ── Touch ── */
-  var touchStartY = 0;
-
-  window.addEventListener('touchstart', function (e) {
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-
-  window.addEventListener('touchend', function (e) {
-    var modal = document.getElementById('project-modal');
-    if (modal && modal.classList.contains('open')) return;
-    if (isAnimating) return;
-
-    var dy = touchStartY - e.changedTouches[0].clientY;
-    if (Math.abs(dy) > 48) {
-      var direction = dy > 0 ? 1 : -1;
-      var idx = getCurrentIdx();
-
-      /* For tall sections, allow normal scrolling until edge is reached */
-      if (isTallSection(idx) && canScrollWithin(idx, direction)) return;
-
-      goTo(idx + direction);
-    }
-  }, { passive: true });
-
-  /* ── Anchor links ── */
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      var href = this.getAttribute('href');
-
-      if (href === '#') { e.preventDefault(); goTo(0); return; }
-
-      var target = document.querySelector(href);
-      if (!target) return;
-
-      e.preventDefault();
-      var idx = sections.indexOf(target);
-      if (idx >= 0) {
-        goTo(idx);
-      } else {
-        /* Resolve to the section that contains the target */
-        var targetTop = target.getBoundingClientRect().top + window.scrollY;
-        var tops = getSectionTops();
-        var nearestIdx = 0;
-        for (var i = 0; i < tops.length; i++) {
-          if (tops[i] <= targetTop) nearestIdx = i;
-        }
-        goTo(nearestIdx);
-      }
-    });
-  });
 
 }());
 
