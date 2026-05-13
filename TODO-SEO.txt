@@ -1,0 +1,223 @@
+============================================================
+EHW LANDSCAPES — SEO TO-DO LIST (THINGS ONLY YOU CAN DO)
+============================================================
+
+This is the off-page work I can't do for you from the code.
+Ordered roughly by impact. Tick them off as you go.
+
+
+------------------------------------------------------------
+0. DEPLOY THE NEW FILES (do this first)
+------------------------------------------------------------
+The site on ehwlandscapes.com is still serving the old version.
+Once you deploy, these new/changed files must be live:
+
+  - index.html              (full rewrite)
+  - css/styles.css          (new SEO styles appended)
+  - js/main.js              (section-snap scroll removed)
+  - robots.txt              (NEW file at site root)
+  - sitemap.xml             (NEW file at site root)
+  - assets/images/work/gardens/    (NEW folder)
+  - assets/images/work/fencing/    (NEW folder)
+  - assets/images/work/lawns/lawn-new-01.jpg, -02, -03  (NEW)
+  - assets/images/work/transformations/fence-replacement-before.jpg
+  - assets/images/work/transformations/fence-replacement-after.jpg
+  - favicon.ico                       (NEW file at site root)
+  - assets/favicon/                   (NEW folder — full PNG set
+                                       + apple-touch-icon + manifest)
+
+After deploying, open these URLs in a browser and confirm
+they all load (not 404):
+
+  https://ehwlandscapes.com/
+  https://ehwlandscapes.com/robots.txt
+  https://ehwlandscapes.com/sitemap.xml
+  https://ehwlandscapes.com/favicon.ico
+  https://ehwlandscapes.com/assets/favicon/favicon-96.png
+
+NOTE on favicon in Google search results: Google only re-fetches
+favicons every few weeks/months. After you deploy, the new icon
+may not appear in search results for a while — it'll appear in
+browser tabs immediately, but search results refresh slower. You
+can speed it up by re-submitting the homepage URL via Search
+Console's "URL inspection -> Request indexing" once the site is
+live.
+
+
+------------------------------------------------------------
+1. GOOGLE SEARCH CONSOLE (do this within 24h of deploying)
+------------------------------------------------------------
+This is how you tell Google the new site exists and tracks
+how you're ranking.
+
+  a. Go to https://search.google.com/search-console
+  b. Add property: ehwlandscapes.com (domain property if
+     you can edit DNS, otherwise URL-prefix property)
+  c. Verify ownership (Google will give you a TXT record
+     or HTML file to add)
+  d. In the left sidebar -> Sitemaps -> add:
+        sitemap.xml
+     and submit.
+  e. Use "URL inspection" on https://ehwlandscapes.com/
+     and click "Request indexing".
+
+Then come back to Search Console every couple of weeks and
+check the Performance tab. After 4-6 weeks you'll see which
+keywords are pulling impressions.
+
+
+------------------------------------------------------------
+2. GOOGLE BUSINESS PROFILE — POLISH IT
+------------------------------------------------------------
+You already have one verified. Make sure it's fully optimised:
+
+  - Primary category: Landscaper  (or Gardener, whichever
+    Google offers)
+  - Add additional categories: Fence Contractor, Lawn Care
+    Service, Garden Designer
+  - Add each service as a separate Service entry with a
+    short description:
+        Gardening / Lawn Mowing / Fencing / Weeding /
+        Garden Maintenance / Hedge Trimming / Hardscaping
+  - Set service area: Hayling Island, Havant, Emsworth,
+    Waterlooville
+  - Upload 10+ original photos (the new ones in
+    assets/images/work/ are perfect — geotag if possible)
+  - Set business hours (real ones — match what's on the
+    website footer)
+  - Make sure these all match the site EXACTLY:
+        Name:    EHW Landscapes
+        Phone:   07469 237953
+        Locality: Hayling Island, Hampshire
+  - Add the website URL: https://ehwlandscapes.com/
+
+NOTE: I wrote "Mon-Sat, 8am-6pm" on the website as a
+placeholder. If those aren't your real hours, tell me and
+I'll change the site to match.
+
+
+------------------------------------------------------------
+3. REVIEWS — THIS IS THE BIGGEST LEVER
+------------------------------------------------------------
+A Google Business Profile with 25+ Hayling Island reviews
+beats one with 3, every time. This single thing will move
+you up the Maps "3-pack" faster than anything else.
+
+How to do it:
+
+  a. In Google Business Profile, click "Share review form"
+     and grab the short g.page link (looks like
+     g.page/r/CXXXXXXXX/review).
+  b. Save that link in your phone notes.
+  c. After every finished job, text the customer:
+        "Hi [name] — really enjoyed working on your garden.
+         If you have 30 seconds, would you mind leaving us
+         a quick Google review? [link]
+         Thanks again, [Ellis/brother]"
+  d. Aim for at least 1 new review per week for the first
+     3 months. Quality + recency > quantity alone.
+
+
+------------------------------------------------------------
+4. LOCAL CITATIONS (NAP listings)
+------------------------------------------------------------
+Get listed on these UK directories using the EXACT same
+name/phone/address every time. Inconsistent NAP is the #1
+reason local businesses don't rank.
+
+  Exact details to use:
+    Name:    EHW Landscapes
+    Phone:   07469 237953
+    Area:    Hayling Island, Hampshire, PO11
+    Website: https://ehwlandscapes.com/
+
+  Sites to submit to (free):
+    [ ] Bing Places for Business
+    [ ] Apple Business Connect
+    [ ] Yell.com
+    [ ] Checkatrade
+    [ ] MyBuilder
+    [ ] TrustATrader
+    [ ] Houzz
+    [ ] Nextdoor (set up local business page)
+    [ ] Hotfrog UK
+    [ ] FreeIndex UK
+    [ ] Cylex UK
+    [ ] Thomson Local
+    [ ] 192.com Business
+
+
+------------------------------------------------------------
+5. LOCAL BACKLINKS (worth way more than national ones)
+------------------------------------------------------------
+Try these — even 3-4 successful links will move the needle:
+
+  [ ] Hayling Island Business Association (Google "Hayling
+      Island business directory")
+  [ ] Havant Borough Council — local business directory
+  [ ] Sponsor something small in the community (bowls club,
+      school fete, sailing club) — they almost always link
+      back from their website
+  [ ] Post helpful gardening advice in Hayling Island
+      Facebook community groups (not ads — actual advice).
+      Some people will check your profile and visit the site
+  [ ] Approach 1-2 Hayling Island bloggers / local news
+      sites (The News Portsmouth, Hayling Today) for a
+      "local business spotlight" feature
+
+
+------------------------------------------------------------
+6. ONGOING CONTENT — 1 BLOG POST PER MONTH
+------------------------------------------------------------
+Domain trust and keyword reach grow with regular content.
+This is optional but high-leverage. If you want to do it,
+let me know and I'll add a /blog/ section to the site.
+
+Post ideas (each one targets a new long-tail keyword):
+  - Best time to mow a lawn on Hayling Island
+  - How often should you trim a hedge in Hampshire?
+  - Storm-damaged fence repairs — what to do first
+  - Spring garden cleanup checklist for South Hampshire
+  - Best plants for salty coastal gardens
+  - How much should garden maintenance cost?
+
+After 6 of these you'll start ranking for queries you
+didn't even plan for.
+
+
+------------------------------------------------------------
+7. THINGS TO SANITY-CHECK ON THE SITE
+------------------------------------------------------------
+I made a few judgement calls — tell me if any are wrong:
+
+  [ ] Business hours: I wrote "Mon-Sat, 8am-6pm" — confirm
+      or correct
+  [ ] Rate: site says "£22 per hour, per person" — you
+      confirmed this, leaving as is
+  [ ] "12 Years" stat on About section — was in the original
+      template, double-check it's accurate (your firm
+      founded 2012?)
+  [ ] "200+ Projects" stat — same, sanity check
+  [ ] Testimonials (S.H., M.R., J.P.) — these were already
+      on the site. Confirm they're real customers, not
+      template placeholders. Fake testimonials = Google
+      penalty risk.
+
+
+------------------------------------------------------------
+8. ONCE THE ABOVE IS DONE
+------------------------------------------------------------
+Come back to me with:
+  - Confirmation that the site is deployed and the URLs
+    above return 200 OK
+  - Your GBP short review link (g.page/r/...) so I can
+    add a "Leave a Review" button to the site
+  - Any photos of completed fencing/gardening jobs you
+    want me to add to the gallery
+
+I'll also wire in opening-hours JSON-LD schema once you
+confirm the real hours.
+
+============================================================
+END
+============================================================
