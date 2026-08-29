@@ -55,6 +55,14 @@
       <image:caption>Roses in full bloom beside a freshly mown lawn in a garden maintained by EHW Landscapes on Hayling Island</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/hedge-before.jpg</image:loc>
+      <image:caption>Overgrown hedge being cut back by EHW Landscapes, mid-cut with clippings across the path</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/hedge-after.jpg</image:loc>
+      <image:caption>Hedge cut back square and the path swept clean after hedge cutting in Hampshire</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-before.jpg</image:loc>
       <image:caption>Collapsing storm-damaged fence before replacement on Hayling Island</image:caption>
     </image:image>
@@ -70,11 +78,5 @@
       <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/ivy-removal-after.jpg</image:loc>
       <image:caption>Clean brick house wall after EHW Landscapes removed the ivy in Hampshire</image:caption>
     </image:image>
-  </url>
-  <url>
-    <loc>https://ehwlandscapes.com/store.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
