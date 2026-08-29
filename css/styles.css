@@ -294,12 +294,12 @@ select {
    ============================================================ */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 100vh;
   background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 96px 24px 104px;
 }
 
 .hero-content {
@@ -357,10 +357,31 @@ select {
   }
 }
 
-/* Hero call-to-action — big, obvious "Get a Quote" button */
+/* Hero tagline — visible statement of what we do + where */
+.hero-tagline {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-top: 10px;
+  max-width: 34ch;
+  opacity: 0;
+  animation: hero-sub-in 1.2s ease both;
+  animation-delay: 1.25s;
+}
+
+/* Hero call-to-action buttons — big and obvious, no scrolling required */
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
 .hero-cta {
   display: inline-block;
-  margin-top: 22px;
   padding: 16px 38px;
   background: var(--green);
   color: #f4f1e9;
@@ -369,16 +390,18 @@ select {
   font-weight: 500;
   letter-spacing: 0.06em;
   text-decoration: none;
+  border: 1px solid var(--green);
   border-radius: 4px;
   box-shadow: 0 6px 20px rgba(44, 80, 40, 0.22);
   opacity: 0;
   animation: hero-sub-in 1.2s ease both;
   animation-delay: 1.4s;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-cta:hover {
   background: #234021;
+  border-color: #234021;
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(44, 80, 40, 0.3);
 }
@@ -386,6 +409,22 @@ select {
 .hero-cta:active {
   transform: translateY(0);
   box-shadow: 0 4px 14px rgba(44, 80, 40, 0.22);
+}
+
+/* Secondary button — sends people straight to the photo gallery */
+.hero-cta-ghost {
+  background: transparent;
+  color: var(--green);
+  border-color: rgba(44, 80, 40, 0.4);
+  box-shadow: none;
+  animation-delay: 1.55s;
+}
+
+.hero-cta-ghost:hover {
+  background: rgba(44, 80, 40, 0.08);
+  border-color: var(--green);
+  color: #234021;
+  box-shadow: 0 8px 20px rgba(44, 80, 40, 0.14);
 }
 
 /* Scroll indicator */
@@ -477,11 +516,13 @@ select {
   grid-row: span 1;
 }
 
-.gallery-grid .gallery-item:nth-child(4) {
+/* Wide 4th tile only when it belongs to a 5-image group, otherwise
+   grids that are a clean multiple of 3 end up with a ragged last row */
+.gallery-grid .gallery-item:nth-child(4):nth-last-child(2) {
   grid-column: span 2;
 }
 
-.gallery-grid .gallery-item:nth-child(4) img {
+.gallery-grid .gallery-item:nth-child(4):nth-last-child(2) img {
   aspect-ratio: 3 / 2;
 }
 
@@ -1190,6 +1231,15 @@ select {
     letter-spacing: 0.22em;
   }
 
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
   /* Section padding */
   .section {
     padding: 64px 0;
@@ -1218,11 +1268,12 @@ select {
   }
 
   /* 5th item fills the row on its own — make it landscape */
-  .gallery-grid .gallery-item:nth-child(5) {
+  /* Only stretch the 5th tile when it is the final, odd one out */
+  .gallery-grid .gallery-item:nth-child(5):last-child {
     grid-column: span 2;
   }
 
-  .gallery-grid .gallery-item:nth-child(5) img {
+  .gallery-grid .gallery-item:nth-child(5):last-child img {
     aspect-ratio: 3 / 2;
   }
 
@@ -1318,6 +1369,26 @@ select {
     gap: 6px;
   }
 
+  .hero-tagline {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* Stack the two buttons full-width so they are easy to tap */
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .hero-cta {
+    padding: 16px 24px;
+    text-align: center;
+  }
+
   /* Gallery — keep 2 columns but tighter */
   .gallery-item img {
     aspect-ratio: 1 / 1;
@@ -1327,7 +1398,7 @@ select {
     aspect-ratio: 1 / 1;
   }
 
-  .gallery-grid .gallery-item:nth-child(5) img {
+  .gallery-grid .gallery-item:nth-child(5):last-child img {
     aspect-ratio: 2 / 1;
   }
 
@@ -1537,6 +1608,57 @@ html {
   color: var(--muted);
 }
 
+/* Areas we cover */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px 36px;
+}
+
+.area-card {
+  padding: 24px 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+.area-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.area-body {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.areas-note {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 60ch;
+  margin-top: 48px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule);
+}
+
+.areas-note a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(44, 80, 40, 0.35);
+  transition: border-color 0.2s ease;
+}
+
+.areas-note a:hover {
+  border-bottom-color: var(--green);
+}
+
 /* FAQ */
 .faq-section {
   background-color: var(--bg);
@@ -1717,6 +1839,11 @@ a.nap-line:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px 28px;
   }
+
+  .areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 28px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1732,6 +1859,26 @@ a.nap-line:hover {
 
   .service-card:last-child {
     border-bottom: 1px solid var(--rule);
+  }
+
+  .areas-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .area-card {
+    padding: 20px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .area-card:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .areas-note {
+    margin-top: 32px;
+    border-top: none;
+    padding-top: 0;
   }
 
   .section-h2 {
