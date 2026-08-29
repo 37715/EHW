@@ -64,7 +64,7 @@
     "url": "https://ehwlandscapes.com/",
     "logo": "https://ehwlandscapes.com/assets/images/logo/ehw_logo_transparent.png",
     "image": "https://ehwlandscapes.com/assets/images/work/gardens/garden-02.jpg",
-    "description": "Family-run hedge cutting, hedge trimming, lawn mowing and garden maintenance serving Hayling Island, Havant, Emsworth, Waterlooville, Cosham and the surrounding South Hampshire area. Hedges cut, shaped and reduced, lawns mown and edged, plus fencing, weeding and ivy removal.",
+    "description": "Family-run hedge cutting, hedge trimming, lawn mowing and garden maintenance serving Hayling Island, Havant, Emsworth, Waterlooville, Cosham and the surrounding South Hampshire area. Hedges cut, shaped and reduced, lawns mown and edged, plus fencing, weeding, border mulching and ivy removal.",
     "telephone": "+44 7469 237953",
     "priceRange": "££",
     "currenciesAccepted": "GBP",
@@ -121,6 +121,8 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fencing", "areaServed": "Hayling Island, Havant, Emsworth, Waterlooville, Cosham" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Weeding", "areaServed": "Hayling Island, Havant, Emsworth, Waterlooville, Cosham" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ivy Removal", "areaServed": "Hayling Island, Havant, Emsworth, Waterlooville, Cosham" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mulching", "areaServed": "Hayling Island, Havant, Emsworth, Waterlooville, Cosham" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bark Chip and Wood Chip Mulch Laying", "areaServed": "Hayling Island, Havant, Emsworth, Waterlooville, Cosham" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Patios and Paving", "areaServed": "Hayling Island, Havant, Emsworth" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outdoor Tiling", "areaServed": "Hayling Island, Havant, Emsworth" } }
       ]
@@ -139,6 +141,11 @@
       "Fencing installation",
       "Weeding",
       "Ivy removal",
+      "Mulching",
+      "Bark chip mulch",
+      "Wood chip mulch",
+      "Garden border mulching",
+      "Weed suppression",
       "Seasonal garden tidy-ups",
       "Patio laying",
       "Outdoor tiling"
@@ -194,6 +201,44 @@
     "alternateName": ["Lawn Cutting", "Grass Cutting"],
     "name": "Lawn Mowing on Hayling Island, Havant, Emsworth, Waterlooville and Cosham",
     "description": "Weekly and fortnightly lawn mowing, grass cutting and edging. Striped finish, clippings removed, gardens left tidy.",
+    "provider": { "@id": "https://ehwlandscapes.com/#business" },
+    "areaServed": [
+      { "@type": "City", "name": "Hayling Island" },
+      { "@type": "City", "name": "Havant" },
+      { "@type": "City", "name": "Emsworth" },
+      { "@type": "City", "name": "Waterlooville" },
+      { "@type": "City", "name": "Cosham" },
+      { "@type": "City", "name": "Bedhampton" },
+      { "@type": "City", "name": "Purbrook" },
+      { "@type": "City", "name": "Rowlands Castle" },
+      { "@type": "City", "name": "Denmead" },
+      { "@type": "City", "name": "Portsmouth" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "GBP",
+      "price": "22.00",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "22.00",
+        "priceCurrency": "GBP",
+        "unitText": "per hour, per person"
+      },
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: Mulching service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://ehwlandscapes.com/#mulching",
+    "serviceType": "Mulching",
+    "alternateName": ["Bark Chip Mulching", "Wood Chip Mulching", "Garden Border Mulching"],
+    "name": "Mulching and Bark Chip on Hayling Island, Havant, Emsworth, Waterlooville and Cosham",
+    "description": "Garden borders weeded out and finished with a proper depth of bark or wood chip mulch. Mulching holds moisture in the soil through dry spells, suppresses weeds before they germinate and feeds the beds as it rots down, cutting how often a garden needs weeding.",
     "provider": { "@id": "https://ehwlandscapes.com/#business" },
     "areaServed": [
       { "@type": "City", "name": "Hayling Island" },
@@ -294,7 +339,23 @@
         "name": "What other garden services do you provide?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Alongside hedge cutting and lawn mowing we do general gardening, weeding, ivy removal, fencing, seasonal cut-backs and leaf clearance. We also take on patios, paving and outdoor tiling when asked. We work on residential gardens and small commercial grounds."
+          "text": "Alongside hedge cutting and lawn mowing we do general gardening, weeding, mulching and bark chip, ivy removal, fencing, seasonal cut-backs and leaf clearance. We also take on patios, paving and outdoor tiling when asked. We work on residential gardens and small commercial grounds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do mulching and bark chip on garden borders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We weed the beds out properly first, then lay bark chip or wood chip mulch at a depth that actually works — around 5 to 7cm. Mulching holds moisture in the soil through a dry summer, stops most weed seeds germinating and feeds the border as it breaks down, so the beds need far less attention for the rest of the year. It is a cheap job that saves money on weeding later, and we do it across Hayling Island, Havant, Emsworth, Waterlooville and Cosham."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often does a garden need mulching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Once a year is plenty for most gardens. The usual approach is a top-up each spring, once the soil has warmed but before the weeds get going, which gives the borders cover for the whole growing season. Bark chip breaks down over roughly twelve to eighteen months, so an annual top-up keeps the depth right."
         }
       },
       {
@@ -427,6 +488,10 @@
           <h3 class="service-title">Weeding &amp; Ivy Removal</h3>
           <p class="service-body">Hand-weeding beds, paths and driveways, plus ivy stripped off walls and fences without wrecking the brickwork underneath. Done thoroughly so it stays gone.</p>
         </article>
+        <article class="service-card" data-stagger-item>
+          <h3 class="service-title">Mulching &amp; Bark Chip</h3>
+          <p class="service-body">Beds weeded out and finished with a proper depth of bark mulch or wood chip across Hayling Island, Havant and Emsworth. Mulching locks moisture into the soil through summer, smothers weeds before they start and feeds the beds as it breaks down &#8212; so a garden that gets mulched needs far less weeding for the rest of the year.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -436,7 +501,7 @@
     <div class="container">
       <span class="label reveal">Our Work</span>
       <h2 class="section-h2 reveal" data-anim="focus">Recent hedge cutting &amp; lawn work.</h2>
-      <p class="section-lede reveal">Real photographs from gardens across Hayling Island, Havant, Emsworth and Waterlooville — hedges cut and shaped, lawns mown and edged, ivy stripped back to bare brick.</p>
+      <p class="section-lede reveal">Real photographs from gardens across Hayling Island, Havant, Emsworth and Waterlooville — hedges cut and shaped, lawns mown and edged, borders weeded and mulched, ivy stripped back to bare brick.</p>
 
       <!-- Hedge Cutting -->
       <div class="gallery-group">
@@ -447,6 +512,12 @@
           </div>
           <div class="gallery-item" data-stagger-item>
             <img src="assets/images/work/hedges/hedge-topiary-02.jpg" alt="Clipped topiary and neat hedge cutting along a driveway in Havant, Hampshire" loading="lazy" />
+          </div>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/hedges/hedge-lollipop-topiary.jpg" alt="Lollipop topiary tree clipped into a perfect ball by EHW Landscapes on Hayling Island" loading="lazy" />
+          </div>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/hedges/hedge-driveway-trimmed.jpg" alt="Privet hedge cut square and level along a driveway in Havant, Hampshire" loading="lazy" />
           </div>
           <div class="gallery-item" data-stagger-item>
             <img src="assets/images/work/hedges/hedge-trimming-action.jpg" alt="EHW Landscapes cutting a tall garden hedge in Emsworth, South Hampshire" loading="lazy" />
@@ -481,8 +552,11 @@
 
       <!-- Gardens & Fencing -->
       <div class="gallery-group">
-        <h3 class="gallery-heading reveal">Gardens &amp; Fencing</h3>
+        <h3 class="gallery-heading reveal">Mulching, Gardens &amp; Fencing</h3>
         <div class="gallery-grid" data-stagger>
+          <div class="gallery-item" data-stagger-item>
+            <img src="assets/images/work/mulching/mulch-border-01.jpg" alt="Weeded border finished with a deep bark mulch to lock in moisture and stop weeds, Hayling Island" loading="lazy" />
+          </div>
           <div class="gallery-item" data-stagger-item>
             <img src="assets/images/work/fencing/fence-01.jpg" alt="New feather-edge fence installed by EHW Landscapes in Havant, Hampshire" loading="lazy" />
           </div>
@@ -508,11 +582,11 @@
         <div class="ba-pair" data-stagger>
           <div class="ba-item" data-stagger-item>
             <span class="ba-label">Before</span>
-            <img src="assets/images/work/transformations/fence-replacement-before.jpg" alt="Collapsing storm-damaged fence before replacement on Hayling Island" loading="lazy" />
+            <img src="assets/images/work/transformations/hedge-roadside-before.jpg" alt="Overgrown roadside privet hedge with a straggly top before hedge cutting in Hampshire" loading="lazy" />
           </div>
           <div class="ba-item" data-stagger-item>
             <span class="ba-label">After</span>
-            <img src="assets/images/work/transformations/fence-replacement-after.jpg" alt="Brand new feather-edge fence installed by EHW Landscapes" loading="lazy" />
+            <img src="assets/images/work/transformations/hedge-roadside-after.jpg" alt="The same roadside hedge cut flat and square with crisp edges after hedge trimming" loading="lazy" />
           </div>
         </div>
         <div class="ba-pair" data-stagger>
@@ -523,6 +597,26 @@
           <div class="ba-item" data-stagger-item>
             <span class="ba-label">After</span>
             <img src="assets/images/work/transformations/ivy-removal-after.jpg" alt="Clean brick house wall after EHW Landscapes removed the ivy in Hampshire" loading="lazy" />
+          </div>
+        </div>
+        <div class="ba-pair" data-stagger>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">Before</span>
+            <img src="assets/images/work/transformations/fence-replacement-before.jpg" alt="Collapsing storm-damaged fence before replacement on Hayling Island" loading="lazy" />
+          </div>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">After</span>
+            <img src="assets/images/work/transformations/fence-replacement-after.jpg" alt="Brand new feather-edge fence installed by EHW Landscapes" loading="lazy" />
+          </div>
+        </div>
+        <div class="ba-pair" data-stagger>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">Before</span>
+            <img src="assets/images/work/transformations/patio-before.jpg" alt="Tired lawn and broken stepping stones beside a greenhouse before a new patio was laid" loading="lazy" />
+          </div>
+          <div class="ba-item" data-stagger-item>
+            <span class="ba-label">After</span>
+            <img src="assets/images/work/transformations/patio-after.jpg" alt="New Indian sandstone patio with a setts border laid by EHW Landscapes in Hampshire" loading="lazy" />
           </div>
         </div>
       </div>
@@ -624,6 +718,7 @@
       <span class="marquee-item">Fencing</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Bedhampton</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Weeding</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Mulching</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Free Quotes</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Family Run</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Est. 2012</span><span class="marquee-sep">✦</span>
@@ -642,6 +737,7 @@
       <span class="marquee-item">Fencing</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Bedhampton</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Weeding</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Mulching</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Free Quotes</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Family Run</span><span class="marquee-sep">✦</span>
       <span class="marquee-item">Est. 2012</span><span class="marquee-sep">✦</span>
@@ -703,7 +799,15 @@
         </details>
         <details class="faq-item">
           <summary>What other garden services do you provide?</summary>
-          <p>Alongside hedge cutting and lawn mowing we do general gardening, weeding, ivy removal, fencing, seasonal cut-backs and leaf clearance. We also take on patios, paving and outdoor tiling when asked. We work on residential gardens and small commercial grounds.</p>
+          <p>Alongside hedge cutting and lawn mowing we do general gardening, weeding, mulching and bark chip, ivy removal, fencing, seasonal cut-backs and leaf clearance. We also take on patios, paving and outdoor tiling when asked. We work on residential gardens and small commercial grounds.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you do mulching and bark chip on garden borders?</summary>
+          <p>Yes. We weed the beds out properly first, then lay bark chip or wood chip mulch at a depth that actually works — around 5 to 7cm. Mulching holds moisture in the soil through a dry summer, stops most weed seeds germinating and feeds the border as it breaks down, so the beds need far less attention for the rest of the year. It&#8217;s a cheap job that saves money on weeding later, and we do it right across Hayling Island, Havant, Emsworth, Waterlooville and Cosham.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How often does a garden need mulching?</summary>
+          <p>Once a year is plenty for most gardens. We usually top up each spring, once the soil has warmed but before the weeds get going, which gives the borders cover for the whole growing season. Bark chip breaks down over roughly twelve to eighteen months, so an annual top-up keeps the depth right.</p>
         </details>
         <details class="faq-item">
           <summary>Do you do fencing work?</summary>
@@ -773,6 +877,7 @@
               <option value="gardening">Gardening</option>
               <option value="fencing">Fencing</option>
               <option value="weeding-ivy-removal">Weeding &amp; Ivy Removal</option>
+              <option value="mulching">Mulching &amp; Bark Chip</option>
               <option value="patios-tiling">Patios &amp; Tiling</option>
               <option value="other">Other</option>
             </select>
