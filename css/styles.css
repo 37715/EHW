@@ -464,6 +464,73 @@ select {
 }
 
 /* ============================================================
+   INTERLUDE — featured photo sitting under the hero.
+   Caption sits on a solid cream plate that overlaps the image
+   corner, so text never has to compete with the photograph.
+   ============================================================ */
+.interlude {
+  background-color: var(--bg);
+  padding: 96px 0 40px;
+}
+
+.interlude-inner {
+  position: relative;
+}
+
+.interlude-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  line-height: 0;
+}
+
+.interlude-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 48%;
+  /* Slow settle out of a gentle push-in as the figure reveals */
+  transform: scale(1.06);
+  transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interlude-figure.visible img {
+  transform: scale(1);
+}
+
+.interlude-note {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin-top: -68px;
+  background-color: var(--bg);
+  padding: 30px 34px 0 0;
+}
+
+.interlude-eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.interlude-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.25rem, 2.3vw, 1.85rem);
+  line-height: 1.32;
+  color: var(--ink);
+  padding-left: 18px;
+  border-left: 2px solid var(--green);
+}
+
+/* ============================================================
    WORK — Gallery
    ============================================================ */
 .gallery-group {
@@ -1238,6 +1305,21 @@ select {
   .hero-cta {
     padding: 15px 30px;
     font-size: 1rem;
+  }
+
+  /* Interlude — drop the overlap, stack caption under the photo */
+  .interlude {
+    padding: 56px 0 8px;
+  }
+
+  .interlude-figure img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .interlude-note {
+    margin-top: 22px;
+    max-width: none;
+    padding: 0;
   }
 
   /* Section padding */
