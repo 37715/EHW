@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://ehwlandscapes.com/hedge-cutting.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/hedge-roadside-before.jpg</image:loc>
+      <image:caption>Overgrown roadside privet hedge with a straggly top before hedge cutting in Hampshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/hedge-roadside-after.jpg</image:loc>
+      <image:caption>Roadside hedge cut flat and square with crisp edges after hedge trimming</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-lollipop-topiary.jpg</image:loc>
+      <image:caption>Lollipop topiary tree clipped into a perfect ball by EHW Landscapes on Hayling Island</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://ehwlandscapes.com/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
