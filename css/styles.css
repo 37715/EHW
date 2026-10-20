@@ -1660,7 +1660,7 @@ html.cookies-accepted .cookie-bar {
   width: 32px;
   height: 32px;
   pointer-events: none;
-  z-index: 99999;
+  z-index: 100001;
   transform-origin: 3px 3px;
   rotate: 0deg;
   transition: rotate 0.25s cubic-bezier(0.16, 1, 0.3, 1);
