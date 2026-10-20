@@ -24,6 +24,34 @@
     </image:image>
   </url>
   <url>
+    <loc>https://ehwlandscapes.com/commercial-grounds-maintenance</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-privet-trimmed.jpg</image:loc>
+      <image:caption>Privet hedge cut square and level, with trimmings still on the lawn in Hampshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-01.jpg</image:loc>
+      <image:caption>A mown and edged lawn after a maintenance visit in Hampshire</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ehwlandscapes.com/garden-fencing</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-before.jpg</image:loc>
+      <image:caption>A collapsing storm-damaged fence before it was replaced</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-after.jpg</image:loc>
+      <image:caption>New feather-edge fence installed by EHW Landscapes</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://ehwlandscapes.com/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>

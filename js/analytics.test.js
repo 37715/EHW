@@ -90,6 +90,21 @@ test('quote success reads only the service field', function () {
   assert.equal(gtag.calls[0][2].service_type, 'other');
 });
 
+test('site type is sent as service_type and contact fields are not', function () {
+  var gtag = mockGtag();
+  var form = {
+    querySelector: function (sel) {
+      if (sel === '#service') return { value: 'care-home' };
+      throw new Error('unexpected field ' + sel);
+    }
+  };
+  analytics.notifyQuoteSuccess(gtag, { ok: true }, form, { fired: false });
+  assert.deepEqual(gtag.calls[0][2], {
+    form_name: 'quote_enquiry',
+    service_type: 'care-home'
+  });
+});
+
 test('click_to_call does not send telephone numbers', function () {
   var gtag = mockGtag();
   analytics.sendClickToCall(gtag, 'tel:+447469237953');

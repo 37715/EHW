@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Google tag (gtag.js) + Consent Mode v2. Defaults denied; never auto-granted. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('ehw_cookie_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22CTG1LGFH"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-22CTG1LGFH');
+  </script>
+  <script>
+    try {
+      if (localStorage.getItem('ehw_cookie_consent') === 'granted') {
+        document.documentElement.classList.add('cookies-accepted');
+      }
+    } catch (e) {}
+    (function () {
+      if (window.__ehwTelBound) return;
+      window.__ehwTelBound = true;
+      document.addEventListener('click', function (e) {
+        var node = e.target && e.target.nodeType === 1 ? e.target : (e.target && e.target.parentElement);
+        var link = node && node.closest ? node.closest('a[href^="tel:"], a[href^="TEL:"]') : null;
+        if (!link || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var href = link.getAttribute('href') || '';
+        if (href.toLowerCase().indexOf('tel:') !== 0) return;
+        e.preventDefault();
+        var started = false;
+        function go() {
+          if (started) return;
+          started = true;
+          window.location.href = href;
+        }
+        gtag('event', 'click_to_call', {
+          link_type: 'tel',
+          transport_type: 'beacon',
+          event_callback: go,
+          event_timeout: 1000
+        });
+        setTimeout(go, 1000);
+      }, true);
+    })();
+    document.addEventListener('DOMContentLoaded', function () {
+      var bar = document.getElementById('cookie-bar');
+      if (!bar) return;
+      function hideBar() {
+        bar.classList.remove('is-visible');
+        bar.setAttribute('hidden', '');
+      }
+      function choose(granted) {
+        try { localStorage.setItem('ehw_cookie_consent', granted ? 'granted' : 'denied'); } catch (err) {}
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: granted ? 'granted' : 'denied'
+        });
+        if (granted) document.documentElement.classList.add('cookies-accepted');
+        hideBar();
+      }
+      var accept = document.getElementById('cookie-accept');
+      var reject = document.getElementById('cookie-reject');
+      if (accept) accept.addEventListener('click', function () { choose(true); });
+      if (reject) reject.addEventListener('click', function () { choose(false); });
+      if (document.documentElement.classList.contains('cookies-accepted')) hideBar();
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Garden Fencing in Hayling Island &amp; Havant | EHW Landscapes</title>
+  <meta name="description" content="Feather-edge and closeboard garden fences, panels, posts and gates. Storm-damaged fences replaced. Fixed quotes across Hayling Island, Havant, Emsworth and Waterlooville." />
+  <link rel="canonical" href="https://ehwlandscapes.com/garden-fencing" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="author" content="EHW Landscapes" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="EHW Landscapes" />
+  <meta property="og:title" content="Garden Fencing in Hayling Island &amp; Havant | EHW Landscapes" />
+  <meta property="og:description" content="New fences, replacement panels and storm-damaged boundaries. We look at the run, then give you a fixed price." />
+  <meta property="og:url" content="https://ehwlandscapes.com/garden-fencing" />
+  <meta property="og:image" content="https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-after.jpg" />
+  <meta property="og:image:alt" content="A new feather-edge fence installed by EHW Landscapes after a storm-damaged boundary was replaced" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Garden Fencing in Hayling Island &amp; Havant | EHW Landscapes" />
+  <meta name="twitter:description" content="Garden fences and gates installed and replaced across Hayling Island, Havant, Emsworth and Waterlooville." />
+  <meta name="twitter:image" content="https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-after.jpg" />
+
+  <meta name="geo.region" content="GB-HAM" />
+  <meta name="geo.placename" content="Hayling Island, Havant, Emsworth, Waterlooville, Hampshire" />
+  <meta name="geo.position" content="50.7903;-0.9756" />
+  <meta name="ICBM" content="50.7903, -0.9756" />
+  <meta name="theme-color" content="#1b2418" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://ehwlandscapes.com/garden-fencing#service",
+    "mainEntityOfPage": "https://ehwlandscapes.com/garden-fencing",
+    "serviceType": "Garden Fencing",
+    "name": "Garden Fencing on Hayling Island, Havant, Emsworth and Waterlooville",
+    "description": "Feather-edge and closeboard garden fences, replacement panels and posts, gates, and storm-damaged boundaries replaced. Quoted as a fixed job.",
+    "provider": { "@id": "https://ehwlandscapes.com/#business" },
+    "areaServed": [
+      { "@type": "City", "name": "Hayling Island" },
+      { "@type": "City", "name": "Havant" },
+      { "@type": "City", "name": "Emsworth" },
+      { "@type": "City", "name": "Waterlooville" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://ehwlandscapes.com/garden-fencing#quote",
+      "description": "We come and look at the run, then give you a fixed price for the fence. Quotes are free."
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ehwlandscapes.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Garden Fencing", "item": "https://ehwlandscapes.com/garden-fencing" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="cookie-bar is-visible" id="cookie-bar" role="dialog" aria-labelledby="cookie-bar-copy">
+    <p class="cookie-bar-copy" id="cookie-bar-copy">We use analytics to see which pages help people find us. We don&#8217;t send names, emails or phone numbers.</p>
+    <div class="cookie-bar-actions">
+      <button type="button" class="cookie-bar-accept" id="cookie-accept">Accept</button>
+      <button type="button" class="cookie-bar-reject" id="cookie-reject">No thanks</button>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="EHW Landscapes, home">EHW</a>
+      <ul class="nav-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/commercial-grounds-maintenance">Commercial</a></li>
+        <li><a href="/garden-fencing">Fencing</a></li>
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#areas">Areas</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="#quote">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <ul>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/commercial-grounds-maintenance">Commercial</a></li>
+        <li><a href="/garden-fencing">Fencing</a></li>
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#areas">Areas</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="#quote">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section page-head">
+    <div class="container">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>Garden Fencing</span>
+      </nav>
+      <span class="label reveal">Fencing</span>
+      <h1 class="page-h1 page-h1-wide reveal" data-anim="focus">Garden fencing, built to stay up.</h1>
+      <p class="section-lede reveal">New runs, replacement panels and posts, and storm-damaged boundaries put back. Feather-edge and closeboard, gates hung, posts concreted. We look at the fence, then give you a fixed price for the job.</p>
+      <div class="hero-cta-row reveal">
+        <a href="#quote" class="hero-cta">Request a Fencing Quote</a>
+        <a href="tel:+447469237953" class="hero-cta hero-cta-ghost">07469 237953</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="label reveal">What we put up</span>
+      <h2 class="section-h2 reveal" data-anim="focus">A boundary that does the job.</h2>
+      <div class="services-grid" data-stagger>
+        <article class="service-card" data-stagger-item>
+          <h3 class="service-title">New garden fences</h3>
+          <p class="service-body">A new run where there wasn&#8217;t one, or where the old one has finally given up. Posts set properly, panels or boards fixed square, the line kept straight.</p>
+        </article>
+        <article class="service-card" data-stagger-item>
+          <h3 class="service-title">Panels &amp; posts</h3>
+          <p class="service-body">Blown panels and rotten posts replaced without rebuilding a fence that still has life in it. We replace what&#8217;s failed and leave the sound parts alone.</p>
+        </article>
+        <article class="service-card" data-stagger-item>
+          <h3 class="service-title">Feather-edge &amp; closeboard</h3>
+          <p class="service-body">Feather-edge and closeboard where you want a solid boundary rather than a panel that flaps. The boards overlap, the posts are concreted, and the top line stays level.</p>
+        </article>
+        <article class="service-card" data-stagger-item>
+          <h3 class="service-title">Storm damage</h3>
+          <p class="service-body">Fences that went over in a Hampshire gale. We clear the wreckage, set new posts where the old ones have snapped or rotted, and put the boundary back.</p>
+        </article>
+        <article class="service-card" data-stagger-item>
+          <h3 class="service-title">Gates</h3>
+          <p class="service-body">Garden gates hung on the new or existing run, so the fence has a way through that actually closes. Posts either side set to take the weight.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <span class="label reveal">A fence we&#8217;ve done</span>
+      <h2 class="section-h2 reveal" data-anim="focus">Down in a storm, then put back.</h2>
+      <p class="section-lede reveal">Our own photographs. A boundary that had collapsed, and the feather-edge fence that replaced it.</p>
+      <div class="ba-pair" data-stagger>
+        <div class="ba-item" data-stagger-item>
+          <span class="ba-label">Before</span>
+          <img src="assets/images/work/transformations/fence-replacement-before.jpg" alt="A collapsing storm-damaged fence before it was replaced" loading="lazy" />
+        </div>
+        <div class="ba-item" data-stagger-item>
+          <span class="ba-label">After</span>
+          <img src="assets/images/work/transformations/fence-replacement-after.jpg" alt="New feather-edge fence installed by EHW Landscapes in place of the damaged boundary" loading="lazy" />
+        </div>
+      </div>
+      <div class="gallery-grid" data-stagger style="margin-top: 12px;">
+        <div class="gallery-item" data-stagger-item>
+          <img src="assets/images/work/fencing/fence-01.jpg" alt="Feather-edge fence panels installed along a garden boundary in Hampshire" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="label reveal">The price</span>
+      <h2 class="section-h2 reveal" data-anim="focus">We quote the fence, not an hourly rate.</h2>
+      <div class="prose reveal">
+        <p>We come and look at the run: length, height, what&#8217;s still sound, access, and whether the old timber has to come away. Then you get a fixed price for the whole job. That&#8217;s the figure you pay.</p>
+        <p>Quotes are free, and we usually get out to look within a few days. If a fence has gone into something we shouldn&#8217;t be cutting or digging near, we&#8217;ll say so rather than guess.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="label reveal">Where we work</span>
+      <h2 class="section-h2 reveal" data-anim="focus">Hayling Island, Havant, Emsworth, Waterlooville.</h2>
+      <div class="prose reveal">
+        <p>Home is <strong>Hayling Island</strong>. <strong>Havant</strong> and <strong>Emsworth</strong> are over the bridge. <strong>Waterlooville</strong> is a regular run for us. If you&#8217;re just outside that &#8212; Cosham, Bedhampton, Purbrook &#8212; ring and we&#8217;ll tell you whether we can get there.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="quote">
+    <div class="container">
+      <div class="contact-header reveal" data-anim="wipe-up">
+        <span class="label label-light">Get a quote</span>
+        <h2 class="contact-title">Request a Fencing Quote</h2>
+        <p class="contact-sub">Tell us the run. We&#8217;ll come and look, then price the job.</p>
+      </div>
+
+      <div class="contact-nap reveal">
+        <a class="nap-line nap-phone" href="tel:+447469237953" aria-label="Call EHW Landscapes on 07469 237953">
+          <span class="nap-label">Call</span>
+          <span class="nap-value">07469 237953</span>
+        </a>
+        <span class="nap-divider" aria-hidden="true">·</span>
+        <span class="nap-line">
+          <span class="nap-label">Based</span>
+          <span class="nap-value">Hayling Island, Hampshire</span>
+        </span>
+        <span class="nap-divider" aria-hidden="true">·</span>
+        <span class="nap-line">
+          <span class="nap-label">Hours</span>
+          <span class="nap-value">Mon–Sat, 8am–6pm</span>
+        </span>
+      </div>
+
+      <form class="quote-form reveal" id="quote-form" action="https://formspree.io/f/xnjljokj" method="POST">
+        <input type="hidden" name="_subject" value="Garden fencing quote" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your number" autocomplete="tel" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option value="fencing" selected>Fencing</option>
+              <option value="hedge-cutting">Hedge Cutting</option>
+              <option value="lawn-mowing">Lawn Mowing</option>
+              <option value="mulching">Mulching &amp; Bark Chip</option>
+              <option value="weeding-ivy-removal">Weeding &amp; Ivy Removal</option>
+              <option value="garden-maintenance">Garden Maintenance</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-group-full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="How long the run is, feather-edge or panels, and where you are&#8230;" required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="form-submit">Request a Fencing Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-block">
+        <span class="footer-logo">EHW Landscapes</span>
+        <span class="footer-tag">Hedge Cutting &amp; Lawn Mowing · Hayling Island</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/hedge-cutting">Hedge Cutting</a>
+        <a href="/commercial-grounds-maintenance">Commercial Grounds</a>
+        <a href="/garden-fencing">Fencing</a>
+        <a href="/#services">Services</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="footer-block footer-block-right">
+        <a class="footer-phone" href="tel:+447469237953">07469 237953</a>
+        <span class="footer-copy">&#169; 2025 EHW Landscapes</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="modal-close" id="modal-close" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span>Close</span>
+    </button>
+    <div class="modal-body">
+      <div class="modal-stage">
+        <button class="modal-arrow" id="modal-prev" aria-label="Previous image">&#8592;</button>
+        <div class="modal-slides" id="modal-slides"></div>
+        <button class="modal-arrow" id="modal-next" aria-label="Next image">&#8594;</button>
+      </div>
+      <div class="modal-foot">
+        <div class="modal-info">
+          <span class="modal-title" id="modal-title"></span>
+          <span class="modal-loc" id="modal-loc"></span>
+        </div>
+        <div class="modal-dots" id="modal-dots"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/analytics.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -183,7 +183,7 @@ select {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 22px;
   list-style: none;
 }
 
@@ -1798,6 +1798,10 @@ html {
   color: var(--ink);
   max-width: 20ch;
   margin-bottom: 22px;
+}
+
+.page-h1-wide {
+  max-width: 18em;
 }
 
 .prose {
