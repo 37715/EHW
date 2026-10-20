@@ -938,20 +938,25 @@ select {
   transition: color 0.2s ease;
 }
 
-/* Consent bar — sits over the page so existing layout does not shift */
+/* Consent bar — cream card so it stays visible on the dark contact section */
+html.cookies-accepted .cookie-bar {
+  display: none;
+}
+
 .cookie-bar {
   display: none;
   position: fixed;
   left: 16px;
   right: 16px;
   bottom: 16px;
-  z-index: 10000;
+  z-index: 100000;
   max-width: 640px;
   margin: 0 auto;
   padding: 18px 20px;
-  background: #0b1209;
-  border: 1px solid rgba(240, 237, 229, 0.12);
-  color: rgba(240, 237, 229, 0.78);
+  background: #f0ede5;
+  color: #1b2418;
+  border: 1px solid rgba(27, 36, 24, 0.16);
+  box-shadow: 0 12px 40px rgba(17, 26, 15, 0.28);
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -966,6 +971,7 @@ select {
   font-size: 0.82rem;
   line-height: 1.45;
   margin: 0;
+  color: #1b2418;
 }
 
 .cookie-bar-actions {
@@ -981,9 +987,9 @@ select {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 10px 14px;
-  border: 1px solid rgba(240, 237, 229, 0.22);
+  border: 1px solid rgba(27, 36, 24, 0.25);
   background: transparent;
-  color: rgba(240, 237, 229, 0.85);
+  color: #1b2418;
 }
 
 .cookie-bar-accept {
@@ -993,7 +999,7 @@ select {
 }
 
 .cookie-bar-reject:hover {
-  border-color: rgba(240, 237, 229, 0.5);
+  border-color: rgba(27, 36, 24, 0.5);
 }
 
 @media (max-width: 720px) {

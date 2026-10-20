@@ -133,6 +133,7 @@
   }
 
   function bindTelClicks(gtagFn, root) {
+    if (typeof window !== 'undefined' && window.__ehwTelBound) return;
     if (!root || !root.addEventListener) return;
     root.addEventListener('click', function (e) {
       var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
@@ -145,6 +146,7 @@
 
   function initConsentUi(gtagFn, storage, doc) {
     if (!doc || !doc.body) return;
+    if (doc.getElementById && doc.getElementById('cookie-bar')) return;
     var stored = readStoredConsent(storage);
 
     var bar = doc.createElement('div');

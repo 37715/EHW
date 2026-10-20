@@ -28,6 +28,62 @@
     gtag('js', new Date());
     gtag('config', 'G-22CTG1LGFH');
   </script>
+  <script>
+    try {
+      if (localStorage.getItem('ehw_cookie_consent') === 'granted') {
+        document.documentElement.classList.add('cookies-accepted');
+      }
+    } catch (e) {}
+    (function () {
+      if (window.__ehwTelBound) return;
+      window.__ehwTelBound = true;
+      document.addEventListener('click', function (e) {
+        var node = e.target && e.target.nodeType === 1 ? e.target : (e.target && e.target.parentElement);
+        var link = node && node.closest ? node.closest('a[href^="tel:"], a[href^="TEL:"]') : null;
+        if (!link || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var href = link.getAttribute('href') || '';
+        if (href.toLowerCase().indexOf('tel:') !== 0) return;
+        e.preventDefault();
+        var started = false;
+        function go() {
+          if (started) return;
+          started = true;
+          window.location.href = href;
+        }
+        gtag('event', 'click_to_call', {
+          link_type: 'tel',
+          transport_type: 'beacon',
+          event_callback: go,
+          event_timeout: 1000
+        });
+        setTimeout(go, 1000);
+      }, true);
+    })();
+    document.addEventListener('DOMContentLoaded', function () {
+      var bar = document.getElementById('cookie-bar');
+      if (!bar) return;
+      function hideBar() {
+        bar.classList.remove('is-visible');
+        bar.setAttribute('hidden', '');
+      }
+      function choose(granted) {
+        try { localStorage.setItem('ehw_cookie_consent', granted ? 'granted' : 'denied'); } catch (err) {}
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: granted ? 'granted' : 'denied'
+        });
+        if (granted) document.documentElement.classList.add('cookies-accepted');
+        hideBar();
+      }
+      var accept = document.getElementById('cookie-accept');
+      var reject = document.getElementById('cookie-reject');
+      if (accept) accept.addEventListener('click', function () { choose(true); });
+      if (reject) reject.addEventListener('click', function () { choose(false); });
+      if (document.documentElement.classList.contains('cookies-accepted')) hideBar();
+    });
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -205,6 +261,14 @@
   </script>
 </head>
 <body>
+
+  <div class="cookie-bar is-visible" id="cookie-bar" role="dialog" aria-labelledby="cookie-bar-copy">
+    <p class="cookie-bar-copy" id="cookie-bar-copy">We use analytics to see which pages help people find us. We don&#8217;t send names, emails or phone numbers.</p>
+    <div class="cookie-bar-actions">
+      <button type="button" class="cookie-bar-accept" id="cookie-accept">Accept</button>
+      <button type="button" class="cookie-bar-reject" id="cookie-reject">No thanks</button>
+    </div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
