@@ -10,7 +10,7 @@
   const config = {
     enabled: false,
     endpoint: 'https://netgreen.vercel.app/api/integrations/ehw-leads',
-    turnstileSiteKey: '' // Populate only with the PUBLIC Turnstile site key.
+    turnstileSiteKey: '0x4AAAAAAFd8VeIIgWDW7Kux' // Public Cloudflare Turnstile Site Key.
   };
   let widgetId = null;
 
