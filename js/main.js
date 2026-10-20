@@ -258,6 +258,8 @@
       e.preventDefault();
 
       var originalText = submitBtn.textContent;
+      var leadGuard = { fired: false };
+      var gtagFn = typeof gtag === 'function' ? gtag : function () {};
       submitBtn.textContent = 'Sending…';
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.6';
@@ -268,6 +270,9 @@
         headers: { 'Accept': 'application/json' }
       }).then(function (response) {
         if (response.ok) {
+          if (window.EHWAnalytics) {
+            window.EHWAnalytics.notifyQuoteSuccess(gtagFn, response, quoteForm, leadGuard);
+          }
           submitBtn.textContent = 'Sent — thank you.';
           quoteForm.reset();
           setTimeout(function () {

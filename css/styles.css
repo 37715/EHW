@@ -921,8 +921,96 @@ select {
   letter-spacing: 0.04em;
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover,
+.footer-cookie-btn:hover {
   color: rgba(240, 237, 229, 0.5);
+}
+
+.footer-cookie-btn {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: rgba(240, 237, 229, 0.2);
+  letter-spacing: 0.04em;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Consent bar — sits over the page so existing layout does not shift */
+.cookie-bar {
+  display: none;
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10000;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  background: #0b1209;
+  border: 1px solid rgba(240, 237, 229, 0.12);
+  color: rgba(240, 237, 229, 0.78);
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cookie-bar.is-visible {
+  display: flex;
+}
+
+.cookie-bar-copy {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.cookie-bar-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cookie-bar-accept,
+.cookie-bar-reject {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  border: 1px solid rgba(240, 237, 229, 0.22);
+  background: transparent;
+  color: rgba(240, 237, 229, 0.85);
+}
+
+.cookie-bar-accept {
+  background: var(--green);
+  border-color: var(--green);
+  color: #f0ede5;
+}
+
+.cookie-bar-reject:hover {
+  border-color: rgba(240, 237, 229, 0.5);
+}
+
+@media (max-width: 720px) {
+  .cookie-bar.is-visible {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-bar-actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-bar {
+    transition: none;
+  }
 }
 
 .footer-copy {

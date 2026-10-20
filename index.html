@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22CTG1LGFH"></script>
+  <!-- Google tag (gtag.js) + Consent Mode v2. Defaults denied; never auto-granted. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('ehw_cookie_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22CTG1LGFH"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-22CTG1LGFH');
   </script>
@@ -938,6 +957,7 @@
     </div>
   </div>
 
+  <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
