@@ -54,19 +54,54 @@
     return sendGenerateLead(gtagFn, serviceType, guard);
   }
 
-  function sendClickToCall(gtagFn) {
+  function sendClickToCall(gtagFn, onSent) {
     if (typeof gtagFn !== 'function') return false;
-    gtagFn('event', 'click_to_call', { link_type: 'tel' });
+    var params = { link_type: 'tel', transport_type: 'beacon' };
+    if (typeof onSent === 'function') {
+      params.event_callback = onSent;
+      params.event_timeout = 1000;
+    }
+    gtagFn('event', 'click_to_call', params);
     return true;
   }
 
+  function telHref(link) {
+    if (!link) return '';
+    return (link.getAttribute && link.getAttribute('href')) || link.href || '';
+  }
+
   function handleTelClick(gtagFn, link) {
-    var href = '';
-    if (link) {
-      href = (link.getAttribute && link.getAttribute('href')) || link.href || '';
-    }
-    if (String(href).toLowerCase().indexOf('tel:') !== 0) return false;
+    if (String(telHref(link)).toLowerCase().indexOf('tel:') !== 0) return false;
     return sendClickToCall(gtagFn);
+  }
+
+  /* Hold the dialer until gtag has queued the hit. A tel: link otherwise
+     leaves the page before click_to_call is sent, so Tag Assistant only
+     records a generic link click. */
+  function interceptTelClick(gtagFn, event, link, navigate) {
+    var href = String(telHref(link));
+    if (href.toLowerCase().indexOf('tel:') !== 0) return false;
+    if (event && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return false;
+    if (event && typeof event.button === 'number' && event.button !== 0) return false;
+    if (event && event.preventDefault) event.preventDefault();
+
+    var started = false;
+    function go() {
+      if (started) return;
+      started = true;
+      if (typeof navigate === 'function') navigate(href);
+    }
+
+    var timer = setTimeout(go, 1000);
+    var sent = sendClickToCall(gtagFn, function () {
+      clearTimeout(timer);
+      go();
+    });
+    if (!sent) {
+      clearTimeout(timer);
+      go();
+    }
+    return true;
   }
 
   function readStoredConsent(storage) {
@@ -101,8 +136,11 @@
     if (!root || !root.addEventListener) return;
     root.addEventListener('click', function (e) {
       var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
-      if (link) handleTelClick(gtagFn, link);
-    });
+      if (!link) return;
+      interceptTelClick(gtagFn, e, link, function (href) {
+        if (typeof window !== 'undefined') window.location.href = href;
+      });
+    }, true);
   }
 
   function initConsentUi(gtagFn, storage, doc) {
@@ -180,6 +218,7 @@
     notifyQuoteSuccess: notifyQuoteSuccess,
     sendClickToCall: sendClickToCall,
     handleTelClick: handleTelClick,
+    interceptTelClick: interceptTelClick,
     readStoredConsent: readStoredConsent,
     applyConsentChoice: applyConsentChoice,
     restoreConsent: restoreConsent,

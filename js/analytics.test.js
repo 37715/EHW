@@ -109,6 +109,25 @@ test('tel click handler ignores non-phone links', function () {
   assert.equal(gtag.calls.length, 1);
 });
 
+test('phone click waits for the hit before opening the dialer', function () {
+  var gtag = mockGtag();
+  var navigated = [];
+  var event = { defaultPrevented: false, button: 0, preventDefault: function () { this.defaultPrevented = true; } };
+  var link = { getAttribute: function () { return 'tel:+447469237953'; } };
+
+  assert.equal(analytics.interceptTelClick(gtag, event, link, function (href) { navigated.push(href); }), true);
+  assert.equal(event.defaultPrevented, true);
+  assert.equal(navigated.length, 0);
+  assert.equal(gtag.calls.length, 1);
+  assert.equal(gtag.calls[0][1], 'click_to_call');
+  assert.equal(gtag.calls[0][2].transport_type, 'beacon');
+  assert.equal(JSON.stringify(gtag.calls[0][2]).indexOf('7469'), -1);
+
+  gtag.calls[0][2].event_callback();
+  gtag.calls[0][2].event_callback();
+  assert.deepEqual(navigated, ['tel:+447469237953']);
+});
+
 test('consent defaults are denied and never auto-granted', function () {
   var defaults = analytics.deniedConsent();
   assert.equal(defaults.ad_storage, 'denied');
