@@ -18,6 +18,10 @@
       <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-lollipop-topiary.jpg</image:loc>
       <image:caption>Lollipop topiary tree clipped into a perfect ball by EHW Landscapes on Hayling Island</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-privet-trimmed.jpg</image:loc>
+      <image:caption>Variegated privet hedge cut square and level, with trimmings still on the lawn in Hampshire</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://ehwlandscapes.com/</loc>
@@ -28,10 +32,7 @@
       <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-topiary-01.jpg</image:loc>
       <image:caption>Hedge cutting and shaped topiary maintained by EHW Landscapes on Hayling Island</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-topiary-02.jpg</image:loc>
-      <image:caption>Clipped topiary and neat hedge cutting along a driveway in Havant, Hampshire</image:caption>
-    </image:image>
+    <!-- Temporarily hidden: hedge-topiary-02.jpg -->
     <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-trimming-action.jpg</image:loc>
       <image:caption>EHW Landscapes cutting a tall garden hedge in Emsworth, South Hampshire</image:caption>
@@ -52,14 +53,7 @@
       <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-04.jpg</image:loc>
       <image:caption>Roadside lawn cut and edged in Emsworth by EHW Landscapes</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-05.jpg</image:loc>
-      <image:caption>Striped lawn mown beside a waterside home on Hayling Island</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://ehwlandscapes.com/assets/images/work/lawns/lawn-new-06.jpg</image:loc>
-      <image:caption>Lawn mowing and driveway edging at a property in Waterlooville</image:caption>
-    </image:image>
+    <!-- Temporarily hidden: lawn-new-05.jpg and lawn-new-06.jpg -->
     <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/fencing/fence-01.jpg</image:loc>
       <image:caption>New feather-edge fence installed by EHW Landscapes in Havant, Hampshire</image:caption>
@@ -79,6 +73,10 @@
     <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-driveway-trimmed.jpg</image:loc>
       <image:caption>Privet hedge cut square and level along a driveway in Havant, Hampshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/hedges/hedge-privet-trimmed.jpg</image:loc>
+      <image:caption>Variegated privet hedge cut square and level, with trimmings still on the lawn in Hampshire</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/mulching/mulch-border-01.jpg</image:loc>
