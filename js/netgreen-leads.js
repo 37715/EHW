@@ -93,7 +93,7 @@
       data.turnstileToken = responseToken;
       data.utm_source = attribution.utm_source;
       data.utm_campaign = attribution.utm_campaign;
-      data.website = ''; // Honeypot should remain blank unless a bot fills it.
+      data.website = String(formData.get('website') || ''); // Preserve honeypot if one is added.
       submitting = true;
       button.disabled = true;
       button.textContent = 'Sending…';
