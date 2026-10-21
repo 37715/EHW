@@ -1,0 +1,16 @@
+---
+description: Deploy finished site changes without asking first
+alwaysApply: true
+---
+
+# Deploy without asking
+
+When a requested change to this site is finished, deploy it. Do not ask whether to commit, push, or deploy.
+
+Deploy means:
+
+1. Commit the relevant files.
+2. Push to `origin` `main`.
+3. Confirm the Vercel production deployment for that commit succeeded.
+
+Do not stop after local edits to say the work is undeployed. Do not deploy a half-finished change, and do not commit secrets.
