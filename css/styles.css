@@ -629,6 +629,15 @@ select {
   aspect-ratio: 4 / 3;
 }
 
+.gallery-spot {
+  width: min(100%, 420px);
+  margin-bottom: 24px;
+}
+
+.gallery-spot .gallery-item img {
+  aspect-ratio: 3 / 4;
+}
+
 .gallery-item {
   overflow: hidden;
   border-radius: 2px;
