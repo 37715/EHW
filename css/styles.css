@@ -553,10 +553,25 @@ select {
   border-bottom: 1px solid var(--rule);
 }
 
+.gallery-note {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 56ch;
+  margin: -8px 0 20px;
+  line-height: 1.5;
+}
+
 /* Lawn care grid — masonry-like with mixed sizes */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
@@ -1336,7 +1351,8 @@ html.cookies-accepted .cookie-bar {
     padding: 20px 36px;
   }
 
-  .gallery-grid {
+  .gallery-grid,
+  .gallery-pair {
     gap: 10px;
   }
 
@@ -1640,7 +1656,8 @@ html.cookies-accepted .cookie-bar {
     gap: 16px;
   }
 
-  .gallery-grid {
+  .gallery-grid,
+  .gallery-pair {
     gap: 6px;
   }
 

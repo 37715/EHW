@@ -71,6 +71,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/fencing/acorn-panel-vertical.jpg</image:loc>
+      <image:caption>Hand-crafted, locally sourced fence panel by Acorngardens Landscapes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/fencing/acorn-panel-feather.jpg</image:loc>
+      <image:caption>Hand-crafted feather-edge fence panel by Acorngardens Landscapes</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/transformations/fence-replacement-before.jpg</image:loc>
       <image:caption>A collapsing storm-damaged fence before it was replaced</image:caption>
     </image:image>
@@ -162,6 +170,14 @@
       <image:caption>Roadside lawn cut and edged in Emsworth by EHW Landscapes</image:caption>
     </image:image>
     <!-- Temporarily hidden: lawn-new-05.jpg and lawn-new-06.jpg -->
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/fencing/acorn-panel-vertical.jpg</image:loc>
+      <image:caption>Hand-crafted, locally sourced fence panel by Acorngardens Landscapes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ehwlandscapes.com/assets/images/work/fencing/acorn-panel-feather.jpg</image:loc>
+      <image:caption>Hand-crafted feather-edge fence panel by Acorngardens Landscapes</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://ehwlandscapes.com/assets/images/work/gardens/garden-02.jpg</image:loc>
       <image:caption>Formal garden with clipped hedges and stone path, maintained on Hayling Island</image:caption>
