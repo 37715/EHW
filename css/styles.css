@@ -589,6 +589,14 @@ select {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.gallery-item-lead {
+  grid-column: span 2;
+}
+
+.gallery-item-lead img {
+  aspect-ratio: 16 / 10;
+}
+
 .gallery-item:hover img {
   transform: scale(1.03);
 }
