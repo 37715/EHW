@@ -621,6 +621,14 @@ select {
   gap: 12px;
 }
 
+.gallery-pair + .gallery-pair {
+  margin-top: 12px;
+}
+
+.gallery-pair-wide .gallery-item img {
+  aspect-ratio: 4 / 3;
+}
+
 .gallery-item {
   overflow: hidden;
   border-radius: 2px;
