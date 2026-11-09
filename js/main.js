@@ -253,7 +253,14 @@
   const quoteForm = document.getElementById('quote-form');
   const submitBtn = document.getElementById('form-submit');
 
-  if (quoteForm && submitBtn) {
+  // Direct Netgreen handler is disabled by default until staging verification.
+  // When enabled it owns submission; otherwise original Formspree is untouched.
+  var netgreenTakesOver = Boolean(
+    quoteForm && submitBtn && window.EHWNetgreenLeads &&
+    window.EHWNetgreenLeads.enabled() &&
+    window.EHWNetgreenLeads.init(quoteForm, submitBtn)
+  );
+  if (quoteForm && submitBtn && !netgreenTakesOver) {
     quoteForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
